@@ -9,19 +9,20 @@ import sys
 #CONSTANTS
 district = sys.argv[1]
 Pincode =  int(sys.argv[2]) #683572  # 688006 'Fatima'
-# BLOCK_NAME = sys.argv[3]  # 'CHC'
+date = sys.argv[3]  # 'CHC'
+Vname = sys.argv[4]
 # Pincode=683572
 
 # print (H_no)
 
 SLEEP_TIME = 10
 
-URL =  "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id="+district+"&date=27-04-2021&vaccine=COVISHIELD"
+URL =  "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id="+district+"&date="+date+"&vaccine="+Vname
 # print (URL )
 
 
 def looper():
-	print ( " api call starts")
+	# print ( " api call starts")
 	# exit()
 	# time.sleep(1)
 	while True:
@@ -34,9 +35,8 @@ def looper():
 			resp = json.loads(resp.text)
 			# resp.json
 			if( len(resp['centers']) == 0 ):
-				print ("no hostls")
+				print ("no hospitals found")
 				print (resp['centers'])
-				# looper()
 				break
 
 			for center in resp['centers']:
@@ -45,23 +45,17 @@ def looper():
 				# if HOSPITAL_NAME in center['pincode']:#  or BLOCK_NAME in center['block_name']:
 				# if ( center['pincode'] == Pincode )  :#  or BLOCK_NAME in center['block_name']:
 				if ( center['pincode'] >= Pincode and center['pincode'] <= Pincode+8 )  :
-					print(" found ")
+					print(" found Hospital with Pincode  "+Pincode)
 					print (center)
 					call_alarm()
 				else :
-					print("Not found ")
+					print("No matching pincode found ")
 					print (center)
-					# looper()
 
 def call_alarm():
-	# import beepy
 	print('Alarm ... ')
 	beep.beep(4)
-	# time.sleep(1)
 	looper()
-	# beep(sound=1)
-	# sys.stdout.write("\a")
-	# beep(3)
 
 
 
