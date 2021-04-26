@@ -8,7 +8,7 @@ import sys
 
 #CONSTANTS
 H_number = sys.argv[1]
-Pincode = 683572 #683572  # 688006 'Fatima'
+Pincode =  int(sys.argv[2]) #683572  # 688006 'Fatima'
 # BLOCK_NAME = sys.argv[3]  # 'CHC'
 # Pincode=683572
 
