@@ -7,7 +7,7 @@ import sys
 
 
 #CONSTANTS
-H_number = sys.argv[1]
+district = sys.argv[1]
 Pincode =  int(sys.argv[2]) #683572  # 688006 'Fatima'
 # BLOCK_NAME = sys.argv[3]  # 'CHC'
 # Pincode=683572
@@ -16,7 +16,7 @@ Pincode =  int(sys.argv[2]) #683572  # 688006 'Fatima'
 
 SLEEP_TIME = 10
 
-URL =  "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id="+H_number+"&date=27-04-2021&vaccine=COVISHIELD"
+URL =  "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id="+district+"&date=27-04-2021&vaccine=COVISHIELD"
 # print (URL )
 
 
@@ -43,7 +43,8 @@ def looper():
 				 # print(center)
 				# if HOSPITAL_NAME in center['name'] or BLOCK_NAME in center['block_name']:
 				# if HOSPITAL_NAME in center['pincode']:#  or BLOCK_NAME in center['block_name']:
-				if ( center['pincode'] == Pincode )  :#  or BLOCK_NAME in center['block_name']:
+				# if ( center['pincode'] == Pincode )  :#  or BLOCK_NAME in center['block_name']:
+				if ( center['pincode'] >= Pincode and center['pincode'] <= Pincode+8 )  :
 					print(" found ")
 					print (center)
 					call_alarm()
