@@ -36,7 +36,8 @@ def looper():
 			if( len(resp['centers']) == 0 ):
 				print ("no hostls")
 				print (resp['centers'])
-				looper()
+				# looper()
+				break
 
 			for center in resp['centers']:
 				 # print(center)
@@ -49,7 +50,7 @@ def looper():
 				else :
 					print("Not found ")
 					print (center)
-					looper()
+					# looper()
 
 def call_alarm():
 	# import beepy
