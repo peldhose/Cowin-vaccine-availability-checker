@@ -12,7 +12,7 @@ I made this because, it became very hard for somebody to book for the slot on an
 ## Running H-checker;
 
 ```
-  python3 checker.py <district number> <pincode to check> 
+  python3 checker.py <district number> <pincode to check> <Date> <Vaccine name >
 ```
 Example : python3 check_hosp_3.py 307 683572 27-04-2021 COVISHIELD
 
