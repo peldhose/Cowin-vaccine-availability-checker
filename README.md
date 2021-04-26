@@ -14,7 +14,7 @@ I made this because, it became very hard for somebody to book for the slot on an
 ```
   python3 checker.py <district number> <pincode to check> <Date> <Vaccine name COVISHIELD or COVAXIN >
 ```
-Example : python3 check_hosp_3.py 307 683572 27-04-2021 COVISHIELD
+Example : python3 checker.py 307 683572 27-04-2021 COVISHIELD
 
 This will run checker in every 20s and checks API link for pincodes ( pincode+ 8 ),If found it alarms .
 
