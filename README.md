@@ -20,10 +20,10 @@ This will run checker in every 20s and checks API link for pincodes ( pincode+ 8
 
 
 ## District numbers
-307 -- Ernakulam
-301 -- Alapuzha
-297 -- Idukki
-299 -- Trivandrum  
+1. 307 -- Ernakulam
+2. 301 -- Alapuzha
+3. 297 -- Idukki
+4. 299 -- Trivandrum  
 
 
 Lets automate ;) 
