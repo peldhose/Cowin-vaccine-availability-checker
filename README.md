@@ -6,7 +6,7 @@ I made this because, it became very hard for somebody to book for the slot on an
 ## Requirements to  install 
 ```
   sudo apt-get install libasound2-dev python3.6-dev   build-essential libssl-dev libffi-dev
-  pip3 install simpleaudio beepy
+  pip install -r requirements.txt
 ```
 
 ## Running H-checker;
@@ -14,9 +14,14 @@ I made this because, it became very hard for somebody to book for the slot on an
 ```
   python3 checker.py <district number> <pincode to check> <Date> <Vaccine name COVISHIELD or COVAXIN >
 ```
-Example : python3 checker.py 307 683572 27-04-2021 COVISHIELD
 
+### Example: 
+```
+  python3 checker.py 307 683572 27-04-2021 COVISHIELD
+```
 This will run checker in every 20s and checks API link for pincodes ( pincode+ 8 ),If found it alarms .
+
+**Note:** Data is available only for current day (+1 at best), set the dates accordingly
 
 
 ## District numbers
